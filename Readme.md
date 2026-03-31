@@ -1,23 +1,29 @@
-# 
-Welcome to my project! I made this to help teachers and students manage their school work. It uses a "Brain" to do math and a "Cleaner" to keep the computer happy.
+# Lab 1: Grade Evaluator & Archiver
+
+## Files Included
+
+| File | Description |
+|:--- |:--- |
+| `grade-evaluator.py` | Python script for grade calculation. |
+| `organizer.sh` | Bash script for file management and archiving. |
+| `grades.csv` | Data source file. |
 
 ---
 
-## 
-This folder has three special files that work together:
+## How to Run
 
-1. **grade-evaluator.py**: This is a Python script. Think of it as a super-fast calculator. It reads a list of grades and tells you if a student passed their class.
-2. **organizer.sh**: This is a Shell script. Think of it as a digital broom. It sweeps old files into a "treasure chest" folder so your workspace stays clean.
-3. **Readme.md**: This is the file you are reading now! It is like a map that tells you where everything is.
+1. **Python Application**: Run `python3 grade-evaluator.py` to see the final grade and GPA.
+2. **Shell Script**: Run `bash organizer.sh` to archive the current grades and reset the workspace.
 
 ---
 
-## 
-The Grade Brain is very smart. It looks at your homework (Formative) and your big tests (Summative).
+## What the Python Script Does
+- Checks that all scores are between 0 and 100.
+- Calculates the final grade and GPA.
+- Shows a **PASS** only if the student gets 50% or more in both homework and tests.
 
-### How to start it:
-1. Make sure you have a file named `grades.csv` in your folder.
-2. Open your terminal.
-3. Type this magic command:
-   ```bash
-   python3 grade-evaluator.py
+## What the Shell Script Does
+1. Creates a folder called `archive` if it is not there.
+2. Moves the old `grades.csv` into the `archive` folder.
+3. Makes a new, empty `grades.csv` file.
+4. Writes a note in `organizer.log` to show it is done.
